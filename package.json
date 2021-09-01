@@ -1,0 +1,22 @@
+{
+  "name": "mern-app",
+  "version": "0.0.1",
+  "description": "Forwardslash Development MERN application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Forwardslash-development/mern-app.git"
+  },
+  "keywords": [
+    "forwardslash-development"
+  ],
+  "author": "jv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Forwardslash-development/mern-app/issues"
+  },
+  "homepage": "https://github.com/Forwardslash-development/mern-app#readme"
+}
