@@ -1,12 +1,16 @@
+import Page from '../layout/page';
+
 const Login = () => {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col">
-          <h1>Login</h1>
+    <Page>
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 offset-md-3">
+            <h1>Login</h1>
+          </div>
         </div>
       </div>
-    </div>
+    </Page>
   );
 };
 
