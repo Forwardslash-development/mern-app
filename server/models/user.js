@@ -60,6 +60,10 @@ userSchema
 // methods > authenticate, encryptPassword, makeSalt
 
 userSchema.methods = {
+  authenticate: function (plainText) {
+    return this.encryptPassword(plainText) == this.hashed_password;
+  },
+
   encrytpPassword: function (password) {
     if (!password) return '';
     try {
@@ -71,7 +75,11 @@ userSchema.methods = {
       return '';
     }
   },
-  makeSalt: function () {},
+  makeSalt: function () {
+    return Math.round(new Date().valueOf() * Math.random()) + '';
+  },
 };
 
 // export user model
+
+module.exports = mongoose.model('User', userSchema);
