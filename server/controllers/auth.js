@@ -1,5 +1,3 @@
 exports.register = (req, res) => {
-  res.json({
-    data: 'register controller middleware endpoint',
-  });
+  console.log('Register Controller', req.body);
 };

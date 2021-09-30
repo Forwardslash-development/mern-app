@@ -6,4 +6,6 @@
 
 ### \*this readme will update
 
+Added mongoose js for schema
+
 #### Server port: 1968

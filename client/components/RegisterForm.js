@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react';
 
 const RegisterForm = () => {
@@ -24,7 +25,15 @@ const RegisterForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.table({ name, email, password });
+    // console.table({ name, email, password });
+    axios
+      .post(`http://localhost:1968/api/register`, {
+        name,
+        email,
+        password,
+      })
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
   };
 
   return (
@@ -59,6 +68,7 @@ const RegisterForm = () => {
       <div className="form-group">
         <button className="btn btn-outline-warning">{buttonText} </button>
       </div>
+      {JSON.stringify(state)}
     </form>
   );
 };
